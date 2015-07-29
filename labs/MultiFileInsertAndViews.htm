@@ -24,17 +24,17 @@ w\:* {behavior:url(#default#VML);}
  <o:DocumentProperties>
   <o:Author>Alex Zeltov</o:Author>
   <o:LastAuthor>Alex Zeltov</o:LastAuthor>
-  <o:Revision>2</o:Revision>
+  <o:Revision>3</o:Revision>
   <o:TotalTime>2</o:TotalTime>
   <o:Created>2015-07-29T16:09:00Z</o:Created>
-  <o:LastSaved>2015-07-29T16:18:00Z</o:LastSaved>
+  <o:LastSaved>2015-07-29T16:50:00Z</o:LastSaved>
   <o:Pages>3</o:Pages>
-  <o:Words>1075</o:Words>
-  <o:Characters>6134</o:Characters>
+  <o:Words>1052</o:Words>
+  <o:Characters>5906</o:Characters>
   <o:Company>Hortonworks Inc</o:Company>
-  <o:Lines>51</o:Lines>
-  <o:Paragraphs>14</o:Paragraphs>
-  <o:CharactersWithSpaces>7195</o:CharactersWithSpaces>
+  <o:Lines>189</o:Lines>
+  <o:Paragraphs>118</o:Paragraphs>
+  <o:CharactersWithSpaces>6962</o:CharactersWithSpaces>
   <o:Version>14.0</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -44,8 +44,6 @@ w\:* {behavior:url(#default#VML);}
 <link rel=themeData href="MultiFileInsertAndViews_files/themedata.xml">
 <!--[if gte mso 9]><xml>
  <w:WordDocument>
-  <w:SpellingState>Clean</w:SpellingState>
-  <w:GrammarState>Clean</w:GrammarState>
   <w:TrackMoves>false</w:TrackMoves>
   <w:TrackFormatting/>
   <w:PunctuationKerning/>
@@ -431,15 +429,12 @@ span.BalloonTextChar
 	mso-ascii-font-family:"Lucida Grande";
 	mso-hansi-font-family:"Lucida Grande";
 	mso-bidi-font-family:"Lucida Grande";}
-span.SpellE
-	{mso-style-name:"";
-	mso-spl-e:yes;}
-span.GramE
-	{mso-style-name:"";
-	mso-gram-e:yes;}
 .MsoChpDefault
 	{mso-style-type:export-only;
 	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
 	font-family:Cambria;
 	mso-ascii-font-family:Cambria;
 	mso-ascii-theme-font:minor-latin;
@@ -473,14 +468,19 @@ table.MsoNormalTable
 	mso-para-margin:0in;
 	mso-para-margin-bottom:.0001pt;
 	mso-pagination:widow-orphan;
-	font-size:12.0pt;
+	font-size:10.0pt;
 	font-family:Cambria;
 	mso-ascii-font-family:Cambria;
 	mso-ascii-theme-font:minor-latin;
 	mso-hansi-font-family:Cambria;
 	mso-hansi-theme-font:minor-latin;}
 </style>
-<![endif]-->
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1032"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
 </head>
 
 <body bgcolor=white lang=EN-US style='tab-interval:.5in'>
@@ -497,9 +497,9 @@ none;text-autospace:none'><b><span style='font-size:15.0pt;font-family:"Helvetic
 mso-bidi-font-family:"Helvetica Neue"'>Multi-Table File Insert and Views</span></b><span
 style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
 
-<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=755
- style='border-collapse:collapse;mso-table-layout-alt:fixed;border:none;
- mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=755
+ style='border-collapse:collapse;mso-table-layout-alt:fixed;mso-yfti-tbllook:
+ 1184;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
  <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
   <td width=65 style='width:65.0pt;border:solid windowtext 1.0pt;border-right:
   solid windowtext 6.0pt;mso-border-alt:solid windowtext .5pt;mso-border-right-alt:
@@ -551,9 +551,8 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 6.0pt;
   background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
-  mso-layout-grid-align:none;text-autospace:none'><span class=SpellE><span
-  class=GramE><b><span style='font-family:Times;mso-bidi-font-family:Times'>root@ubuntu</span></b></span></span><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>:~# cd ~ /labs/Lab9.1 </span></b><span
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>root@ubuntu:~# cd ~ /labs/Lab9.1 </span></b><span
   style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
  </tr>
@@ -572,24 +571,20 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
   mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
-  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>View the
-  contents of the </span><span class=SpellE><span style='font-size:13.0pt;
-  font-family:"Courier New"'>orders.hive</span></span><span style='font-size:
-  13.0pt;font-family:"Courier New"'> </span><span style='font-size:15.0pt;
-  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>file in
-  the Advanced Hive Programming lab folder: </span><span style='font-family:
-  Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>View the contents
+  of the </span><span style='font-size:13.0pt;font-family:"Courier New"'>orders.hive
+  </span><span style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
+  "Helvetica Neue"'>file in the Advanced Hive Programming lab folder: </span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:4'>
   <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
   mso-border-left-alt:solid windowtext 6.0pt;background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
-  mso-layout-grid-align:none;text-autospace:none'><span class=SpellE><span
-  class=GramE><b><span style='font-family:Times;mso-bidi-font-family:Times'>root@ubuntu</span></b></span></span><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>:~/labs/Lab9.1# more <span
-  class=SpellE>orders.hive</span> </span></b><span style='font-family:Times;
-  mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>root@ubuntu:~/labs/Lab9.1# more orders.hive
+  </span></b><span style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:5'>
@@ -604,14 +599,12 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   defines a Hive table named </span><span style='font-size:13.0pt;font-family:
   "Courier New"'>orders </span><span style='font-size:15.0pt;font-family:"Helvetica Neue";
   mso-bidi-font-family:"Helvetica Neue"'>that has seven columns. Notice it also
-  loads the contents of </span><span class=SpellE><span style='font-size:13.0pt;
-  font-family:"Courier New"'>shop.tsv</span></span><span style='font-size:13.0pt;
-  font-family:"Courier New"'> </span><span style='font-size:15.0pt;font-family:
-  "Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>into the </span><span
-  style='font-size:13.0pt;font-family:"Courier New"'>orders </span><span
-  style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
-  "Helvetica Neue"'>table. </span><span style='font-family:Times;mso-bidi-font-family:
-  Times'><o:p></o:p></span></p>
+  loads the contents of </span><span style='font-size:13.0pt;font-family:"Courier New"'>shop.tsv
+  </span><span style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
+  "Helvetica Neue"'>into the </span><span style='font-size:13.0pt;font-family:
+  "Courier New"'>orders </span><span style='font-size:15.0pt;font-family:"Helvetica Neue";
+  mso-bidi-font-family:"Helvetica Neue"'>table. </span><span style='font-family:
+  Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:6'>
@@ -630,10 +623,10 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
   mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
   font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Execute
-  the contents of </span><span class=SpellE><span style='font-size:13.0pt;
-  font-family:"Courier New"'>orders.hive</span></span><span style='font-size:
-  15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>: </span><span
-  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  the contents of </span><span style='font-size:13.0pt;font-family:"Courier New"'>orders.hive</span><span
+  style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
+  "Helvetica Neue"'>: </span><span style='font-family:Times;mso-bidi-font-family:
+  Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:7'>
@@ -643,11 +636,10 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 6.0pt;
   background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
-  mso-layout-grid-align:none;text-autospace:none'><span class=SpellE><span
-  class=GramE><b><span style='font-family:Times;mso-bidi-font-family:Times'>root@ubuntu</span></b></span></span><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>:~/labs/Lab9.1# hive -f <span
-  class=SpellE>orders.hive</span> </span></b><span style='font-family:Times;
-  mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>root@ubuntu:~/labs/Lab9.1# hive -f
+  orders.hive </span></b><span style='font-family:Times;mso-bidi-font-family:
+  Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:8'>
@@ -674,12 +666,10 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
   mso-border-left-alt:solid windowtext 6.0pt;background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
-  mso-layout-grid-align:none;text-autospace:none'><span class=GramE><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>hive</span></b></span><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>&gt; describe orders;&#8232;hive&gt;
-  set <span class=SpellE>hive.execution.engine</span>=<span class=SpellE>tez</span>;
-  hive&gt; select count(*) from orders; </span></b><span style='font-family:
-  Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>hive&gt; describe orders;&#8232;hive&gt;
+  set hive.execution.engine=tez; hive&gt; select count(*) from orders; </span></b><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:10'>
@@ -749,14 +739,14 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
    </v:formulas>
    <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
    <o:lock v:ext="edit" aspectratio="t"/>
-  </v:shapetype><v:shape id="Picture_x0020_1" o:spid="_x0000_i1030" type="#_x0000_t75"
+  </v:shapetype><v:shape id="Picture_x0020_1" o:spid="_x0000_i1025" type="#_x0000_t75"
    style='width:1pt;height:1pt;visibility:visible;mso-wrap-style:square'>
    <v:imagedata src="MultiFileInsertAndViews_files/image001.png" o:title=""/>
   </v:shape><![endif]--><![if !vml]><img width=3 height=3
   src="MultiFileInsertAndViews_files/image002.png" v:shapes="Picture_x0020_1"><![endif]></span><span
   style='font-family:Times;mso-bidi-font-family:Times'><span
   style="mso-spacerun:yes">&nbsp;</span><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
-   id="Picture_x0020_2" o:spid="_x0000_i1029" type="#_x0000_t75" style='width:1pt;
+   id="Picture_x0020_2" o:spid="_x0000_i1026" type="#_x0000_t75" style='width:1pt;
    height:1pt;visibility:visible;mso-wrap-style:square'>
    <v:imagedata src="MultiFileInsertAndViews_files/image003.png" o:title=""/>
   </v:shape><![endif]--><![if !vml]><img width=3 height=3
@@ -780,11 +770,9 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
   mso-border-left-alt:solid windowtext 6.0pt;background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
-  mso-layout-grid-align:none;text-autospace:none'><span class=GramE><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>hive</span></b></span><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>&gt; SELECT username
-  FROM orders LIMIT 10; </span></b><span style='font-family:Times;mso-bidi-font-family:
-  Times'><o:p></o:p></span></p>
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>hive&gt; SELECT username FROM orders LIMIT
+  10; </span></b><span style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:14'>
@@ -825,12 +813,10 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
   mso-border-left-alt:solid windowtext 6.0pt;background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
-  mso-layout-grid-align:none;text-autospace:none'><span class=GramE><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>hive</span></b></span><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>&gt; SELECT username, <span
-  class=SpellE>ordertotal</span> FROM orders ORDER BY <span class=SpellE>ordertotal</span>
-  LIMIT 10; </span></b><span style='font-family:Times;mso-bidi-font-family:
-  Times'><o:p></o:p></span></p>
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>hive&gt; SELECT username, ordertotal FROM
+  orders ORDER BY ordertotal LIMIT 10; </span></b><span style='font-family:
+  Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:17'>
@@ -856,9 +842,8 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   Times'><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
   mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
-  Times;mso-bidi-font-family:Times'>Maria 10&#8232;Megan 10 Melissa 10
-  Christina 10 </span></b><span style='font-family:Times;mso-bidi-font-family:
-  Times'><o:p></o:p></span></p>
+  Times;mso-bidi-font-family:Times'>Maria 10&#8232;Megan 10 Melissa 10 Christina
+  10 </span></b><span style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:19'>
@@ -885,12 +870,10 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
   mso-border-left-alt:solid windowtext 6.0pt;background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
-  mso-layout-grid-align:none;text-autospace:none'><span class=GramE><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>hive</span></b></span><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>&gt; SELECT username, <span
-  class=SpellE>ordertotal</span> FROM orders ORDER BY <span class=SpellE>ordertotal</span>
-  DESC LIMIT 10; </span></b><span style='font-family:Times;mso-bidi-font-family:
-  Times'><o:p></o:p></span></p>
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>hive&gt; SELECT username, ordertotal FROM
+  orders ORDER BY ordertotal DESC LIMIT 10; </span></b><span style='font-family:
+  Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:21'>
@@ -940,11 +923,10 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
   mso-border-left-alt:solid windowtext 6.0pt;background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
-  mso-layout-grid-align:none;text-autospace:none'><span class=GramE><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>hive</span></b></span><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>&gt; SELECT sum(<span
-  class=SpellE>ordertotal</span>), gender FROM orders GROUP BY gender; </span></b><span
-  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>hive&gt; SELECT sum(ordertotal), gender
+  FROM orders GROUP BY gender; </span></b><span style='font-family:Times;
+  mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:25'>
@@ -955,10 +937,10 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
   mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
-  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Based on
-  the output, which gender has spent more money on purchases? ______ <i>Answer:
-  </i>Men spent $9,919,847 and women spent $9,787,324. </span><span
-  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Based on the
+  output, which gender has spent more money on purchases? ______ <i>Answer: </i>Men
+  spent $9,919,847 and women spent $9,787,324. </span><span style='font-family:
+  Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:26'>
@@ -977,12 +959,10 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
   mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
   font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>The </span><span
-  class=SpellE><span style='font-size:13.0pt;font-family:"Courier New"'>orderdate</span></span><span
-  style='font-size:13.0pt;font-family:"Courier New"'> </span><span
+  style='font-size:13.0pt;font-family:"Courier New"'>orderdate </span><span
   style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
   "Helvetica Neue"'>column is a string with the format </span><span
-  class=SpellE><span style='font-size:13.0pt;font-family:"Courier New"'>yyyy</span></span><span
-  style='font-size:13.0pt;font-family:"Courier New"'>-mm-dd</span><span
+  style='font-size:13.0pt;font-family:"Courier New"'>yyyy-mm-dd</span><span
   style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
   "Helvetica Neue"'>. Use the year function to extract the various parts of the
   date. For example, run the following query, which computes the sum of all
@@ -994,11 +974,9 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
   mso-border-left-alt:solid windowtext 6.0pt;background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
-  mso-layout-grid-align:none;text-autospace:none'><span class=GramE><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>hive</span></b></span><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>&gt; SELECT sum(<span
-  class=SpellE>ordertotal</span>), year(<span class=SpellE>order_date</span>)
-  FROM orders GROUP BY year(<span class=SpellE>order_date</span>); </span></b><span
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>hive&gt; SELECT sum(ordertotal),
+  year(order_date) FROM orders GROUP BY year(order_date); </span></b><span
   style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
  </tr>
@@ -1067,15 +1045,14 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
   font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>In this
   step, you will run two completely different queries, but in a single
-  MapReduce job. The output of the queries will be in two separate directories
-  in HDFS. Start by creating a new text file in the </span><span
-  style='font-size:13.0pt;font-family:"Courier New"'>/root/labs/Lab9.1 </span><span
+  MapReduce job. The output of the queries will be in two separate directories in
+  HDFS. Start by creating a new text file in the </span><span style='font-size:
+  13.0pt;font-family:"Courier New"'>/root/labs/Lab9.1 </span><span
   style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
-  "Helvetica Neue"'>folder named </span><span class=SpellE><span
-  style='font-size:13.0pt;font-family:"Courier New"'>multifile.hive</span></span><span
-  style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
-  "Helvetica Neue"'>. </span><span style='font-family:Times;mso-bidi-font-family:
-  Times'><o:p></o:p></span></p>
+  "Helvetica Neue"'>folder named </span><span style='font-size:13.0pt;
+  font-family:"Courier New"'>multifile.hive</span><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>. </span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:32'>
@@ -1114,15 +1091,14 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   Times'><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
   mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
-  Times;mso-bidi-font-family:Times'>SELECT o<span class=GramE>.*</span> WHERE
-  year(<span class=SpellE>order_date</span>) = 2010 INSERT OVERWRITE DIRECTORY
-  'software' </span></b><span style='font-family:Times;mso-bidi-font-family:
-  Times'><o:p></o:p></span></p>
+  Times;mso-bidi-font-family:Times'>SELECT o.* WHERE year(order_date) = 2010
+  INSERT OVERWRITE DIRECTORY 'software' </span></b><span style='font-family:
+  Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
   mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
-  Times;mso-bidi-font-family:Times'>SELECT o<span class=GramE>.*</span> WHERE <span
-  class=SpellE>itemlist</span> LIKE '%Software%'; </span></b><span
-  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  Times;mso-bidi-font-family:Times'>SELECT o.* WHERE itemlist LIKE
+  '%Software%'; </span></b><span style='font-family:Times;mso-bidi-font-family:
+  Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:34'>
@@ -1144,8 +1120,7 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
   mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
   font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Save your
-  changes to </span><span class=SpellE><span style='font-size:13.0pt;
-  font-family:"Courier New"'>multifile.hive</span></span><span
+  changes to </span><span style='font-size:13.0pt;font-family:"Courier New"'>multifile.hive</span><span
   style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
   "Helvetica Neue"'>. </span><span style='font-family:Times;mso-bidi-font-family:
   Times'><o:p></o:p></span></p>
@@ -1180,11 +1155,10 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 6.0pt;
   background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
-  mso-layout-grid-align:none;text-autospace:none'><span class=SpellE><span
-  class=GramE><b><span style='font-family:Times;mso-bidi-font-family:Times'>root@ubuntu</span></b></span></span><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>:~/labs/Lab9.1# hive -f <span
-  class=SpellE>multifile.hive</span> </span></b><span style='font-family:Times;
-  mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>root@ubuntu:~/labs/Lab9.1# hive -f
+  multifile.hive </span></b><span style='font-family:Times;mso-bidi-font-family:
+  Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:37'>
@@ -1212,9 +1186,8 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   "Helvetica Neue"'>phase. Why did this job not require a </span><span
   style='font-size:13.0pt;font-family:"Courier New"'>reduce </span><span
   style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
-  "Helvetica Neue"'>phase?
-  __________________________________________________________________ </span><span
-  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  "Helvetica Neue"'>phase? __________________________________________________________________
+  </span><span style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
   mso-layout-grid-align:none;text-autospace:none'><i><span style='font-size:
   15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Answer:
@@ -1252,11 +1225,9 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
   mso-border-left-alt:solid windowtext 6.0pt;background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
-  mso-layout-grid-align:none;text-autospace:none'><span class=SpellE><span
-  class=GramE><b><span style='font-family:Times;mso-bidi-font-family:Times'>root@ubuntu</span></b></span></span><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>:~/labs/Lab9.1# <span
-  class=SpellE>hadoop</span> <span class=SpellE>fs</span> -<span class=SpellE>ls</span>
-  </span></b><span style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>root@ubuntu:~/labs/Lab9.1# hadoop fs -ls </span></b><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:40'>
@@ -1299,8 +1270,8 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   output files in these two folders. Verify that the </span><span
   style='font-size:13.0pt;font-family:"Courier New"'>2010_orders </span><span
   style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
-  "Helvetica Neue"'>directory contains orders from only the year 2010, and
-  verify that the software directory contains only orders that included </span><span
+  "Helvetica Neue"'>directory contains orders from only the year 2010, and verify
+  that the software directory contains only orders that included </span><span
   style='font-size:13.0pt;font-family:"Courier New"'>ÔSoftware.Õ </span><span
   style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
@@ -1346,22 +1317,18 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   Hive shell. Define a view named </span><span style='font-size:13.0pt;
   font-family:"Courier New"'>2013_orders </span><span style='font-size:15.0pt;
   font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>that
-  contains the </span><span class=SpellE><span style='font-size:13.0pt;
-  font-family:"Courier New"'>orderid</span></span><span style='font-size:15.0pt;
-  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>, </span><span
-  class=SpellE><span style='font-size:13.0pt;font-family:"Courier New"'>order_date</span></span><span
-  style='font-size:13.0pt;font-family:"Courier New"'>, username</span><span
+  contains the </span><span style='font-size:13.0pt;font-family:"Courier New"'>orderid</span><span
   style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
-  "Helvetica Neue"'>, and </span><span class=SpellE><span style='font-size:
-  13.0pt;font-family:"Courier New"'>itemlist</span></span><span
-  style='font-size:13.0pt;font-family:"Courier New"'> </span><span
-  style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
-  "Helvetica Neue"'>columns of the orders table where the </span><span
-  class=SpellE><span style='font-size:13.0pt;font-family:"Courier New"'>order_date</span></span><span
-  style='font-size:13.0pt;font-family:"Courier New"'> </span><span
-  style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
-  "Helvetica Neue"'>was in the year 2013. </span><span style='font-family:Times;
-  mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  "Helvetica Neue"'>, </span><span style='font-size:13.0pt;font-family:"Courier New"'>order_date,
+  username</span><span style='font-size:15.0pt;font-family:"Helvetica Neue";
+  mso-bidi-font-family:"Helvetica Neue"'>, and </span><span style='font-size:
+  13.0pt;font-family:"Courier New"'>itemlist </span><span style='font-size:
+  15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>columns
+  of the orders table where the </span><span style='font-size:13.0pt;
+  font-family:"Courier New"'>order_date </span><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>was in
+  the year 2013. </span><span style='font-family:Times;mso-bidi-font-family:
+  Times'><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
   mso-layout-grid-align:none;text-autospace:none'><i><span style='font-size:
   15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Solution:
@@ -1380,11 +1347,10 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
   mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
-  Times;mso-bidi-font-family:Times'>CREATE VIEW 2013_orders AS&#8232;SELECT <span
-  class=SpellE>orderid</span>, <span class=SpellE>order_date</span>, username, <span
-  class=SpellE>itemlist</span> FROM orders&#8232;WHERE <span class=GramE>year(</span><span
-  class=SpellE>order_date</span>) = '2013'; </span></b><span style='font-family:
-  Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  Times;mso-bidi-font-family:Times'>CREATE VIEW 2013_orders AS&#8232;SELECT
+  orderid, order_date, username, itemlist FROM orders&#8232;WHERE
+  year(order_date) = '2013'; </span></b><span style='font-family:Times;
+  mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:45'>
@@ -1413,9 +1379,8 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
   mso-border-left-alt:solid windowtext 6.0pt;background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
-  mso-layout-grid-align:none;text-autospace:none'><span class=GramE><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>hive</span></b></span><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>&gt; show tables; </span></b><span
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>hive&gt; show tables; </span></b><span
   style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
  </tr>
@@ -1458,10 +1423,8 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
   mso-border-left-alt:solid windowtext 6.0pt;background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
-  mso-layout-grid-align:none;text-autospace:none'><span class=GramE><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>hive</span></b></span><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>&gt; set <span
-  class=SpellE>hive.execution.engine</span>=<span class=SpellE>tez</span>;
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>hive&gt; set hive.execution.engine=tez;
   hive&gt; SELECT COUNT(*) FROM 2013_orders; </span></b><span style='font-family:
   Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
@@ -1500,7 +1463,7 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-pagination:none;mso-layout-grid-align:none;
   text-autospace:none'><span style='font-family:Times;mso-bidi-font-family:
   Times;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_3"
-   o:spid="_x0000_i1028" type="#_x0000_t75" style='width:1pt;height:1pt;
+   o:spid="_x0000_i1027" type="#_x0000_t75" style='width:1pt;height:1pt;
    visibility:visible;mso-wrap-style:square'>
    <v:imagedata src="MultiFileInsertAndViews_files/image005.png" o:title=""/>
   </v:shape><![endif]--><![if !vml]><img width=3 height=3
@@ -1541,12 +1504,10 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 6.0pt;
   background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
-  mso-layout-grid-align:none;text-autospace:none'><span class=GramE><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>hive</span></b></span><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>&gt; SELECT max(<span
-  class=SpellE>ordertotal</span>), <span class=SpellE>userid</span> FROM orders
-  GROUP BY <span class=SpellE>userid</span>; </span></b><span style='font-family:
-  Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>hive&gt; SELECT max(ordertotal), userid
+  FROM orders GROUP BY userid; </span></b><span style='font-family:Times;
+  mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:54'>
@@ -1594,26 +1555,23 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
   mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
   font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Suppose
-  you want to add the </span><span class=SpellE><span style='font-size:13.0pt;
-  font-family:"Courier New"'>itemlist</span></span><span style='font-size:13.0pt;
-  font-family:"Courier New"'> </span><span style='font-size:15.0pt;font-family:
-  "Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>column to the
-  previous query. Try adding it to the </span><span style='font-size:13.0pt;
-  font-family:"Courier New"'>SELECT </span><span style='font-size:15.0pt;
-  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>clause: </span><span
-  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  you want to add the </span><span style='font-size:13.0pt;font-family:"Courier New"'>itemlist
+  </span><span style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
+  "Helvetica Neue"'>column to the previous query. Try adding it to the </span><span
+  style='font-size:13.0pt;font-family:"Courier New"'>SELECT </span><span
+  style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
+  "Helvetica Neue"'>clause: </span><span style='font-family:Times;mso-bidi-font-family:
+  Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:56'>
   <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
   mso-border-left-alt:solid windowtext 6.0pt;background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
-  mso-layout-grid-align:none;text-autospace:none'><span class=GramE><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>hive</span></b></span><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>&gt; SELECT max(<span
-  class=SpellE>ordertotal</span>), <span class=SpellE>userid</span>, <span
-  class=SpellE>itemlist</span> FROM orders GROUP BY <span class=SpellE>userid</span>;
-  </span></b><span style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>hive&gt; SELECT max(ordertotal), userid,
+  itemlist FROM orders GROUP BY userid; </span></b><span style='font-family:
+  Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:57'>
@@ -1625,14 +1583,13 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
   mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
   font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Notice
-  this query is not valid because </span><span class=SpellE><span
-  style='font-size:13.0pt;font-family:"Courier New"'>itemlist</span></span><span
-  style='font-size:13.0pt;font-family:"Courier New"'> </span><span
+  this query is not valid because </span><span style='font-size:13.0pt;
+  font-family:"Courier New"'>itemlist </span><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>is not in
+  the </span><span style='font-size:13.0pt;font-family:"Courier New"'>GROUP BY </span><span
   style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
-  "Helvetica Neue"'>is not in the </span><span style='font-size:13.0pt;
-  font-family:"Courier New"'>GROUP BY </span><span style='font-size:15.0pt;
-  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>key. </span><span
-  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  "Helvetica Neue"'>key. </span><span style='font-family:Times;mso-bidi-font-family:
+  Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:58'>
@@ -1652,12 +1609,10 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
   font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>We can
   join the result set of the max-total query with the orders table to add the </span><span
-  class=SpellE><span style='font-size:13.0pt;font-family:"Courier New"'>itemlist</span></span><span
-  style='font-size:13.0pt;font-family:"Courier New"'> </span><span
+  style='font-size:13.0pt;font-family:"Courier New"'>itemlist </span><span
   style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
   "Helvetica Neue"'>to our result. Start by defining a view named </span><span
-  class=SpellE><span style='font-size:13.0pt;font-family:"Courier New"'>max_ordertotal</span></span><span
-  style='font-size:13.0pt;font-family:"Courier New"'> </span><span
+  style='font-size:13.0pt;font-family:"Courier New"'>max_ordertotal </span><span
   style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
   "Helvetica Neue"'>for the maximum order of each customer: </span><span
   style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
@@ -1670,12 +1625,9 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 6.0pt;
   background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
-  mso-layout-grid-align:none;text-autospace:none'><span class=GramE><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>hive</span></b></span><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>&gt; CREATE VIEW <span
-  class=SpellE>max_ordertotal</span> AS&#8232;SELECT max(<span class=SpellE>ordertotal</span>)
-  AS <span class=SpellE>maxtotal</span>, <span class=SpellE>userid</span> FROM
-  orders GROUP BY <span class=SpellE>userid</span>; </span></b><span
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>hive&gt; CREATE VIEW max_ordertotal AS&#8232;SELECT
+  max(ordertotal) AS maxtotal, userid FROM orders GROUP BY userid; </span></b><span
   style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
  </tr>
@@ -1697,12 +1649,10 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Now join
   the </span><span style='font-size:13.0pt;font-family:"Courier New"'>orders </span><span
   style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
-  "Helvetica Neue"'>table with your </span><span class=SpellE><span
-  style='font-size:13.0pt;font-family:"Courier New"'>max_ordertotal</span></span><span
-  style='font-size:13.0pt;font-family:"Courier New"'> </span><span
-  style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
-  "Helvetica Neue"'>view: </span><span style='font-family:Times;mso-bidi-font-family:
-  Times'><o:p></o:p></span></p>
+  "Helvetica Neue"'>table with your </span><span style='font-size:13.0pt;
+  font-family:"Courier New"'>max_ordertotal </span><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>view: </span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:61'>
@@ -1712,19 +1662,16 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 6.0pt;
   background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
-  mso-layout-grid-align:none;text-autospace:none'><span class=GramE><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>hive</span></b></span><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>&gt; SELECT <span
-  class=SpellE>ordertotal</span>, <span class=SpellE>orders.userid</span>, <span
-  class=SpellE>itemlist</span> FROM orders&#8232;JOIN <span class=SpellE>max_ordertotal</span>
-  ON&#8232;<span class=SpellE>max_ordertotal.userid</span> = <span
-  class=SpellE>orders.userid</span> </span></b><span style='font-family:Times;
-  mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>hive&gt; SELECT ordertotal, orders.userid,
+  itemlist FROM orders&#8232;JOIN max_ordertotal ON&#8232;max_ordertotal.userid
+  = orders.userid </span></b><span style='font-family:Times;mso-bidi-font-family:
+  Times'><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
   mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
-  Times;mso-bidi-font-family:Times'>AND&#8232;<span class=SpellE>max_ordertotal.maxtotal</span>
-  = <span class=SpellE>orders.ordertotal</span>; </span></b><span
-  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  Times;mso-bidi-font-family:Times'>AND&#8232;max_ordertotal.maxtotal =
+  orders.ordertotal; </span></b><span style='font-family:Times;mso-bidi-font-family:
+  Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:62'>
@@ -1746,13 +1693,11 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
   mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
   font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>What did
-  the <span class=SpellE>Tez</span> job look like for this query? ___________ <i>Answer:
-  </i>The query resulted in a </span><span style='font-size:13.0pt;font-family:
-  "Courier New"'>map-map-reduce </span><span class=SpellE><span
-  style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
-  "Helvetica Neue"'>Tez</span></span><span style='font-size:15.0pt;font-family:
-  "Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'> job. </span><span
-  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  the Tez job look like for this query? ___________ <i>Answer: </i>The query
+  resulted in a </span><span style='font-size:13.0pt;font-family:"Courier New"'>map-map-reduce
+  </span><span style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
+  "Helvetica Neue"'>Tez job. </span><span style='font-family:Times;mso-bidi-font-family:
+  Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:63'>
@@ -1767,14 +1712,14 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-pagination:none;mso-layout-grid-align:none;
   text-autospace:none'><span style='font-family:Times;mso-bidi-font-family:
   Times;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_4"
-   o:spid="_x0000_i1027" type="#_x0000_t75" style='width:1pt;height:1pt;
+   o:spid="_x0000_i1028" type="#_x0000_t75" style='width:1pt;height:1pt;
    visibility:visible;mso-wrap-style:square'>
    <v:imagedata src="MultiFileInsertAndViews_files/image007.png" o:title=""/>
   </v:shape><![endif]--><![if !vml]><img width=3 height=3
   src="MultiFileInsertAndViews_files/image008.png" v:shapes="Picture_x0020_4"><![endif]></span><span
   style='font-family:Times;mso-bidi-font-family:Times'><span
   style="mso-spacerun:yes">&nbsp;</span><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
-   id="Picture_x0020_5" o:spid="_x0000_i1026" type="#_x0000_t75" style='width:1pt;
+   id="Picture_x0020_5" o:spid="_x0000_i1029" type="#_x0000_t75" style='width:1pt;
    height:1pt;visibility:visible;mso-wrap-style:square'>
    <v:imagedata src="MultiFileInsertAndViews_files/image009.png" o:title=""/>
   </v:shape><![endif]--><![if !vml]><img width=3 height=3
@@ -1799,13 +1744,11 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
   mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
-  Times;mso-bidi-font-family:Times'>600 98 Grill<span class=GramE>,Freezer,Bedding,Headphones,DVD,Table,Grill,Software,Dishwasher,DVD,Micr</span>
-  <span class=SpellE>owave,Adapter</span>&#8232;600 99
-  Washer,Cookware,Vacuum,Freezer,2-Way <span class=SpellE>Radio,Bicycle,Washer</span>
-  &amp; <span class=SpellE>Dryer,Coffee</span> <span class=SpellE>Maker,Refrigerator,DVD,Boots,DVD</span>&#8232;600
-  100 <span class=SpellE>Bicycle,Washer,DVD,Wrench</span> Set,Sweater,2-Way <span
-  class=SpellE>Radio,Pants,Freezer,Blankets,Grill,Adapter,pillows</span> </span></b><span
-  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  Times;mso-bidi-font-family:Times'>600 98 Grill,Freezer,Bedding,Headphones,DVD,Table,Grill,Software,Dishwasher,DVD,Micr
+  owave,Adapter&#8232;600 99 Washer,Cookware,Vacuum,Freezer,2-Way
+  Radio,Bicycle,Washer &amp; Dryer,Coffee Maker,Refrigerator,DVD,Boots,DVD&#8232;600
+  100 Bicycle,Washer,DVD,Wrench Set,Sweater,2-Way Radio,Pants,Freezer,Blankets,Grill,Adapter,pillows
+  </span></b><span style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:65'>
@@ -1834,7 +1777,7 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   <p class=MsoNormal style='mso-pagination:none;mso-layout-grid-align:none;
   text-autospace:none'><span style='font-family:Times;mso-bidi-font-family:
   Times;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_6"
-   o:spid="_x0000_i1025" type="#_x0000_t75" style='width:1pt;height:1pt;
+   o:spid="_x0000_i1030" type="#_x0000_t75" style='width:1pt;height:1pt;
    visibility:visible;mso-wrap-style:square'>
    <v:imagedata src="MultiFileInsertAndViews_files/image011.png" o:title=""/>
   </v:shape><![endif]--><![if !vml]><img width=3 height=3
@@ -1868,12 +1811,10 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
   mso-border-left-alt:solid windowtext 6.0pt;background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
-  mso-layout-grid-align:none;text-autospace:none'><span class=GramE><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>hive</span></b></span><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>&gt; SELECT sum(<span
-  class=SpellE>ordertotal</span>), <span class=SpellE>userid</span> FROM orders
-  GROUP BY <span class=SpellE>userid</span>; </span></b><span style='font-family:
-  Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>hive&gt; SELECT sum(ordertotal), userid FROM
+  orders GROUP BY userid; </span></b><span style='font-family:Times;mso-bidi-font-family:
+  Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:68'>
@@ -1886,8 +1827,7 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
   font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Notice
   that the output is the sum of all orders, but displaying just the </span><span
-  class=SpellE><span style='font-size:13.0pt;font-family:"Courier New"'>userid</span></span><span
-  style='font-size:13.0pt;font-family:"Courier New"'> </span><span
+  style='font-size:13.0pt;font-family:"Courier New"'>userid </span><span
   style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
   "Helvetica Neue"'>is not very exciting. </span><span style='font-family:Times;
   mso-bidi-font-family:Times'><o:p></o:p></span></p>
@@ -1921,11 +1861,9 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
   mso-border-left-alt:solid windowtext 6.0pt;background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
-  mso-layout-grid-align:none;text-autospace:none'><span class=GramE><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>hive</span></b></span><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>&gt; SELECT sum(<span
-  class=SpellE>ordertotal</span>), <span class=SpellE>userid</span>, username
-  FROM orders&#8232;GROUP BY <span class=SpellE>userid</span>; </span></b><span
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>hive&gt; SELECT sum(ordertotal), userid,
+  username FROM orders&#8232;GROUP BY userid; </span></b><span
   style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
  </tr>
@@ -1944,8 +1882,7 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   error, because the </span><span style='font-size:13.0pt;font-family:"Courier New"'>username
   </span><span style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
   "Helvetica Neue"'>column is not being aggregated but the </span><span
-  class=SpellE><span style='font-size:13.0pt;font-family:"Courier New"'>ordertotal</span></span><span
-  style='font-size:13.0pt;font-family:"Courier New"'> </span><span
+  style='font-size:13.0pt;font-family:"Courier New"'>ordertotal </span><span
   style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
   "Helvetica Neue"'>is. </span><span style='font-family:Times;mso-bidi-font-family:
   Times'><o:p></o:p></span></p>
@@ -1970,8 +1907,7 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   fix is to aggregate the </span><span style='font-size:13.0pt;font-family:
   "Courier New"'>username </span><span style='font-size:15.0pt;font-family:
   "Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>values using the </span><span
-  class=SpellE><span style='font-size:13.0pt;font-family:"Courier New"'>collect_set</span></span><span
-  style='font-size:13.0pt;font-family:"Courier New"'> </span><span
+  style='font-size:13.0pt;font-family:"Courier New"'>collect_set </span><span
   style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
   "Helvetica Neue"'>function, but output only one of them: </span><span
   style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
@@ -1981,13 +1917,10 @@ style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
   mso-border-left-alt:solid windowtext 6.0pt;background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
-  mso-layout-grid-align:none;text-autospace:none'><span class=GramE><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>hive</span></b></span><b><span
-  style='font-family:Times;mso-bidi-font-family:Times'>&gt; SELECT sum(<span
-  class=SpellE>ordertotal</span>), <span class=SpellE>userid</span>, <span
-  class=SpellE>collect_set</span>(username)[0] FROM orders GROUP BY <span
-  class=SpellE>userid</span>; </span></b><span style='font-family:Times;
-  mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>hive&gt; SELECT sum(ordertotal), userid,
+  collect_set(username)[0] FROM orders GROUP BY userid; </span></b><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:74'>
