@@ -1,0 +1,1103 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns:mv="http://macVmlSchemaUri" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta name=Title content="">
+<meta name=Keywords content="">
+<meta http-equiv=Content-Type content="text/html; charset=macintosh">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 14">
+<meta name=Originator content="Microsoft Word 14">
+<link rel=File-List href="Hive%20Analytics%20Functions_files/filelist.xml">
+<link rel=Edit-Time-Data href="Hive%20Analytics%20Functions_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Alex Zeltov</o:Author>
+  <o:LastAuthor>Alex Zeltov</o:LastAuthor>
+  <o:Revision>1</o:Revision>
+  <o:TotalTime>1</o:TotalTime>
+  <o:Created>2015-07-29T16:11:00Z</o:Created>
+  <o:LastSaved>2015-07-29T16:15:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>625</o:Words>
+  <o:Characters>3565</o:Characters>
+  <o:Company>Hortonworks Inc</o:Company>
+  <o:Lines>29</o:Lines>
+  <o:Paragraphs>8</o:Paragraphs>
+  <o:CharactersWithSpaces>4182</o:CharactersWithSpaces>
+  <o:Version>14.0</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=themeData href="Hive%20Analytics%20Functions_files/themedata.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>JA</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="276">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:"Courier New";
+	panose-1:2 7 3 9 2 2 5 2 4 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-536859905 -1073711037 9 0 511 0;}
+@font-face
+	{font-family:Times;
+	panose-1:2 0 5 0 0 0 0 0 0 0;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:"\FF2D\FF33 \660E\671D";
+	mso-font-charset:78;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+@font-face
+	{font-family:"\FF2D\FF33 \660E\671D";
+	mso-font-charset:78;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1073743103 0 0 415 0;}
+@font-face
+	{font-family:"Helvetica Neue";
+	panose-1:2 0 5 3 0 0 0 2 0 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-452984065 1342208475 16 0 1 0;}
+@font-face
+	{font-family:"Lucida Grande";
+	panose-1:2 11 6 0 4 5 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-520090897 1342218751 0 0 447 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \660E\671D";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	font-family:"Lucida Grande";
+	mso-fareast-font-family:"\FF2D\FF33 \660E\671D";
+	mso-fareast-theme-font:minor-fareast;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Balloon Text";
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:9.0pt;
+	font-family:"Lucida Grande";
+	mso-ascii-font-family:"Lucida Grande";
+	mso-hansi-font-family:"Lucida Grande";
+	mso-bidi-font-family:"Lucida Grande";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \660E\671D";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;}
+</style>
+<![endif]-->
+</head>
+
+<body bgcolor=white lang=EN-US style='tab-interval:.5in'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;mso-layout-grid-align:
+none;text-autospace:none'><b><span style='font-size:15.0pt;font-family:"Helvetica Neue";
+mso-bidi-font-family:"Helvetica Neue"'>Objective: </span></b><span
+style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:15.0pt;font-family:"Helvetica Neue";
+mso-bidi-font-family:"Helvetica Neue"'>Using Hive Analytics Functions</span></b></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=755
+ style='border-collapse:collapse;mso-table-layout-alt:fixed;border:none;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=65 style='width:65.0pt;border:solid windowtext 1.0pt;border-right:
+  solid windowtext 6.0pt;mso-border-alt:solid windowtext .5pt;mso-border-right-alt:
+  solid windowtext 6.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>7 </span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+  <td width=690 style='width:690.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-left-alt:solid windowtext 6.0pt;mso-border-top-alt:.5pt;
+  mso-border-left-alt:6.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:
+  6.0pt;mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:
+  0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Using the
+  </span><span style='font-size:13.0pt;font-family:"Courier New"'>OVER </span><span
+  style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
+  "Helvetica Neue"'>Clause </span><span style='font-family:Times;mso-bidi-font-family:
+  Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=65 rowspan=3 style='width:65.0pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext 6.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>7.1 </span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+  <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext 6.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Now let’s
+  compute the sum of all orders for each customer, but this time use the </span><span
+  style='font-size:13.0pt;font-family:"Courier New"'>OVER </span><span
+  style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
+  "Helvetica Neue"'>clause to not group the output and to also display the </span><span
+  class=SpellE><span style='font-size:13.0pt;font-family:"Courier New"'>itemlist</span></span><span
+  style='font-size:13.0pt;font-family:"Courier New"'> </span><span
+  style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
+  "Helvetica Neue"'>column: </span><span style='font-family:Times;mso-bidi-font-family:
+  Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
+  mso-border-left-alt:solid windowtext 6.0pt;background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span class=GramE><b><span
+  style='font-family:Times;mso-bidi-font-family:Times'>hive</span></b></span><b><span
+  style='font-family:Times;mso-bidi-font-family:Times'>&gt; SELECT <span
+  class=SpellE>userid</span>, <span class=SpellE>itemlist</span>, sum(<span
+  class=SpellE>ordertotal</span>) OVER (PARTITION BY <span class=SpellE>userid</span>)&#8232;FROM
+  orders; </span></b><span style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=690 style='width:690.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-left-alt:solid windowtext 6.0pt;mso-border-left-alt:solid windowtext 6.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 6.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Notice
+  the output contains every order, along with the items they purchased and the
+  sum of all of the orders ever placed from that particular customer. </span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=65 style='width:65.0pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext 6.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>8 </span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+  <td width=690 style='width:690.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext 6.0pt;
+  mso-border-top-alt:.5pt;mso-border-left-alt:6.0pt;mso-border-bottom-alt:.5pt;
+  mso-border-right-alt:6.0pt;mso-border-color-alt:windowtext;mso-border-style-alt:
+  solid;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Using the
+  Window Functions </span><span style='font-family:Times;mso-bidi-font-family:
+  Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=65 rowspan=4 style='width:65.0pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:.5pt;mso-border-left-alt:
+  .5pt;mso-border-bottom-alt:1.0pt;mso-border-right-alt:6.0pt;mso-border-color-alt:
+  windowtext;mso-border-style-alt:solid;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>8.1 </span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+  <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext 6.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>It is not
+  difficult to compute the sum of all orders for each day using the </span><span
+  style='font-size:13.0pt;font-family:"Courier New"'>GROUP BY </span><span
+  style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
+  "Helvetica Neue"'>clause: </span><span style='font-family:Times;mso-bidi-font-family:
+  Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
+  mso-border-left-alt:solid windowtext 6.0pt;background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span class=GramE><b><span
+  style='font-family:Times;mso-bidi-font-family:Times'>hive</span></b></span><b><span
+  style='font-family:Times;mso-bidi-font-family:Times'>&gt; select <span
+  class=SpellE>order_date</span>, sum(<span class=SpellE>ordertotal</span>)
+  FROM orders&#8232;GROUP BY <span class=SpellE>order_date</span>; </span></b><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
+  mso-border-left-alt:solid windowtext 6.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Run the
+  query above and the tail of the output should look like: </span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width=690 style='width:690.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-left-alt:solid windowtext 6.0pt;background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>2013-07-28 18362 2013-07-29 3233 2013-07-30
+  4468 2013-07-31 4714 </span></b><span style='font-family:Times;mso-bidi-font-family:
+  Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width=65 rowspan=4 style='width:65.0pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext 6.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>8.2 </span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+  <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext 6.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Suppose
+  you want to compute the sum for each day that includes each order. This can
+  be done using a window that sums all previous orders along with the current
+  row: </span><span style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
+  mso-border-left-alt:solid windowtext 6.0pt;background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span class=GramE><b><span
+  style='font-family:Times;mso-bidi-font-family:Times'>hive</span></b></span><b><span
+  style='font-family:Times;mso-bidi-font-family:Times'>&gt; SELECT <span
+  class=SpellE>order_date</span>, sum(<span class=SpellE>ordertotal</span>)&#8232;OVER&#8232;(PARTITION
+  BY <span class=SpellE>order_date</span> ROWS BETWEEN UNBOUNDED PRECEDING AND
+  CURRENT ROW) FROM orders; </span></b><span style='font-family:Times;
+  mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
+  mso-border-left-alt:solid windowtext 6.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>To verify
+  that it worked, your tail of your output should look like: </span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12'>
+  <td width=690 style='width:690.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-left-alt:solid windowtext 6.0pt;mso-border-left-alt:solid windowtext 6.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 6.0pt;
+  background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>2013-07-31 3163 2013-07-31 3415 2013-07-31
+  3607 2013-07-31 4146 2013-07-31 4470 2013-07-31 4610 2013-07-31 4714 </span></b><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13'>
+  <td width=65 style='width:65.0pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext 6.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>9 </span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+  <td width=690 style='width:690.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext 6.0pt;
+  mso-border-top-alt:.5pt;mso-border-left-alt:6.0pt;mso-border-bottom-alt:.5pt;
+  mso-border-right-alt:6.0pt;mso-border-color-alt:windowtext;mso-border-style-alt:
+  solid;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Using the
+  Hive Analytics Functions </span><span style='font-family:Times;mso-bidi-font-family:
+  Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14'>
+  <td width=65 rowspan=2 style='width:65.0pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext 6.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>9.1 </span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+  <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext 6.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Run the
+  following query, which displays the rank of the </span><span class=SpellE><span
+  style='font-size:13.0pt;font-family:"Courier New"'>ordertotal</span></span><span
+  style='font-size:13.0pt;font-family:"Courier New"'> </span><span
+  style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
+  "Helvetica Neue"'>by day: </span><span style='font-family:Times;mso-bidi-font-family:
+  Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15'>
+  <td width=690 style='width:690.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-left-alt:solid windowtext 6.0pt;mso-border-left-alt:solid windowtext 6.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 6.0pt;
+  background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span class=GramE><b><span
+  style='font-family:Times;mso-bidi-font-family:Times'>hive</span></b></span><b><span
+  style='font-family:Times;mso-bidi-font-family:Times'>&gt; SELECT <span
+  class=SpellE>order_date</span>, <span class=SpellE>ordertotal</span>, rank()
+  OVER&#8232;(PARTITION BY <span class=SpellE>order_date</span> ORDER BY <span
+  class=SpellE>ordertotal</span>) FROM orders; </span></b><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16'>
+  <td width=65 rowspan=2 style='width:65.0pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext 6.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>9.2 </span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+  <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext 6.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>To verify
+  it worked, the output of July 31, 2013, should look like: </span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17'>
+  <td width=690 style='width:690.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-left-alt:solid windowtext 6.0pt;mso-border-left-alt:solid windowtext 6.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 6.0pt;
+  background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>2013-07-31 48 1 2013-07-31 104 2 2013-07-31
+  119 3 2013-07-31 130 4 2013-07-31 133 5 2013-07-31 135 6 2013-07-31 140 7
+  2013-07-31 147 8 2013-07-31 156 9 2013-07-31 192 10 2013-07-31 192 10
+  2013-07-31 196 12 2013-07-31 240 13 2013-07-31 252 14 2013-07-31 296 15
+  2013-07-31 324 16 2013-07-31 343 17 2013-07-31 500 18 2013-07-31 528 19
+  2013-07-31 539 20 </span></b><span style='font-family:Times;mso-bidi-font-family:
+  Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18'>
+  <td width=65 rowspan=2 style='width:65.0pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext 6.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>9.3 </span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  <p class=MsoNormal style='mso-pagination:none;mso-layout-grid-align:none;
+  text-autospace:none'><span style='font-family:Times;mso-bidi-font-family:
+  Times;mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+   coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+   filled="f" stroked="f">
+   <v:stroke joinstyle="miter"/>
+   <v:formulas>
+    <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+    <v:f eqn="sum @0 1 0"/>
+    <v:f eqn="sum 0 0 @1"/>
+    <v:f eqn="prod @2 1 2"/>
+    <v:f eqn="prod @3 21600 pixelWidth"/>
+    <v:f eqn="prod @3 21600 pixelHeight"/>
+    <v:f eqn="sum @0 0 1"/>
+    <v:f eqn="prod @6 1 2"/>
+    <v:f eqn="prod @7 21600 pixelWidth"/>
+    <v:f eqn="sum @8 21600 0"/>
+    <v:f eqn="prod @7 21600 pixelHeight"/>
+    <v:f eqn="sum @10 21600 0"/>
+   </v:formulas>
+   <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+   <o:lock v:ext="edit" aspectratio="t"/>
+  </v:shapetype><v:shape id="Picture_x0020_7" o:spid="_x0000_i1026" type="#_x0000_t75"
+   style='width:1pt;height:1pt;visibility:visible;mso-wrap-style:square'>
+   <v:imagedata src="Hive%20Analytics%20Functions_files/image001.png" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img width=3 height=3
+  src="Hive%20Analytics%20Functions_files/image002.png" v:shapes="Picture_x0020_7"><![endif]></span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><span
+  style="mso-spacerun:yes">&nbsp;</span><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+   id="Picture_x0020_8" o:spid="_x0000_i1025" type="#_x0000_t75" style='width:1pt;
+   height:1pt;visibility:visible;mso-wrap-style:square'>
+   <v:imagedata src="Hive%20Analytics%20Functions_files/image003.png" o:title=""/>
+  </v:shape><![endif]--><![if !vml]><img width=3 height=3
+  src="Hive%20Analytics%20Functions_files/image004.png" v:shapes="Picture_x0020_8"><![endif]></span><span
+  style="mso-spacerun:yes">&nbsp;</span><o:p></o:p></span></p>
+  </td>
+  <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext 6.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>As a
+  challenge, see if you can run a query similar to the previous one except
+  compute the rank over months instead of each day. </span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><i><span style='font-size:
+  15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Solution:
+  </span></i><span style='font-size:15.0pt;font-family:"Helvetica Neue";
+  mso-bidi-font-family:"Helvetica Neue"'>The rank query by month: </span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19'>
+  <td width=690 style='width:690.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-left-alt:solid windowtext 6.0pt;mso-border-left-alt:solid windowtext 6.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 6.0pt;
+  background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span class=GramE><b><span
+  style='font-family:Times;mso-bidi-font-family:Times'>select</span></b></span><b><span
+  style='font-family:Times;mso-bidi-font-family:Times'> <span class=SpellE>substr</span>(order_date,0,7),
+  <span class=SpellE>ordertotal</span>, rank()&#8232;OVER&#8232;(PARTITION BY <span
+  class=SpellE>substr</span>(order_date,0,7) ORDER BY <span class=SpellE>ordertotal</span>)
+  FROM orders; </span></b><span style='font-family:Times;mso-bidi-font-family:
+  Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20'>
+  <td width=65 style='width:65.0pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext 6.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>10 </span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+  <td width=690 style='width:690.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext 6.0pt;
+  mso-border-top-alt:.5pt;mso-border-left-alt:6.0pt;mso-border-bottom-alt:.5pt;
+  mso-border-right-alt:6.0pt;mso-border-color-alt:windowtext;mso-border-style-alt:
+  solid;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Histograms
+  </span><span style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:21'>
+  <td width=65 rowspan=4 style='width:65.0pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext 6.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>10.1 </span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+  <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext 6.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Run the
+  following Hive query, which uses the </span><span class=SpellE><span
+  style='font-size:13.0pt;font-family:"Courier New"'>histogram_numeric</span></span><span
+  style='font-size:13.0pt;font-family:"Courier New"'> </span><span
+  style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
+  "Helvetica Neue"'>function to compute 20 </span><span style='font-size:13.0pt;
+  font-family:"Courier New"'>(<span class=SpellE>x<span class=GramE>,y</span></span>)
+  </span><span style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
+  "Helvetica Neue"'>pairs of the frequency distribution of the total order
+  amount from customers who purchased a microwave (using the orders table): </span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:22'>
+  <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
+  mso-border-left-alt:solid windowtext 6.0pt;background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span class=GramE><b><span
+  style='font-family:Times;mso-bidi-font-family:Times'>hive</span></b></span><b><span
+  style='font-family:Times;mso-bidi-font-family:Times'>&gt; select explode(<span
+  class=SpellE>histogram_numeric</span>(ordertotal,20)) as x from orders&#8232;where
+  <span class=SpellE>itemlist</span> LIKE &quot;%Microwave%&quot;; </span></b><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:23'>
+  <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
+  mso-border-left-alt:solid windowtext 6.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>The
+  output should look like the following: </span><span style='font-family:Times;
+  mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:24'>
+  <td width=690 style='width:690.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-left-alt:solid windowtext 6.0pt;mso-border-left-alt:solid windowtext 6.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 6.0pt;
+  background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>{&quot;<span class=GramE>x</span>&quot;:14.333333333333332,&quot;y&quot;:3.0}
+  {&quot;<span class=GramE>x</span>&quot;:33.87755102040816,&quot;y&quot;:441.0}
+  {&quot;<span class=GramE>x</span>&quot;:62.52577319587637,&quot;y&quot;:679.0}
+  {&quot;<span class=GramE>x</span>&quot;:89.37823834196874,&quot;y&quot;:965.0}
+  {&quot;<span class=GramE>x</span>&quot;:115.1242236024843,&quot;y&quot;:1127.0}
+  {&quot;<span class=GramE>x</span>&quot;:142.6468885672939,&quot;y&quot;:1382.0}
+  {&quot;<span class=GramE>x</span>&quot;:174.07664233576656,&quot;y&quot;:1370.0}
+  {&quot;<span class=GramE>x</span>&quot;:208.06909090909105,&quot;y&quot;:1375.0}
+  {&quot;<span class=GramE>x</span>&quot;:242.55486381322928,&quot;y&quot;:1285.0}
+  {&quot;<span class=GramE>x</span>&quot;:275.8625954198475,&quot;y&quot;:1048.0}
+  {&quot;<span class=GramE>x</span>&quot;:304.71100917431284,&quot;y&quot;:872.0}
+  {&quot;<span class=GramE>x</span>&quot;:333.1514423076924,&quot;y&quot;:832.0}
+  {&quot;<span class=GramE>x</span>&quot;:363.7630208333335,&quot;y&quot;:768.0}
+  {&quot;<span class=GramE>x</span>&quot;:397.51587301587364,&quot;y&quot;:756.0}
+  {&quot;<span class=GramE>x</span>&quot;:430.9072847682117,&quot;y&quot;:604.0}
+  {&quot;<span class=GramE>x</span>&quot;:461.68715083798895,&quot;y&quot;:537.0}
+  {&quot;<span class=GramE>x</span>&quot;:494.1598360655734,&quot;y&quot;:488.0}
+  {&quot;<span class=GramE>x</span>&quot;:528.5816326530613,&quot;y&quot;:294.0}
+  {&quot;<span class=GramE>x</span>&quot;:555.5166666666672,&quot;y&quot;:180.0}
+  {&quot;<span class=GramE>x</span>&quot;:588.7979797979801,&quot;y&quot;:198.0}
+  </span></b><span style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:25'>
+  <td width=65 rowspan=4 style='width:65.0pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext 6.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>10.2 </span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+  <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext 6.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span style='font-size:15.0pt;
+  font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Write a
+  similar Hive query that computes 10 frequency-distribution pairs for the </span><span
+  class=SpellE><span style='font-size:13.0pt;font-family:"Courier New"'>ordertotal</span></span><span
+  style='font-size:13.0pt;font-family:"Courier New"'> </span><span
+  style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
+  "Helvetica Neue"'>from the orders table where </span><span class=SpellE><span
+  style='font-size:13.0pt;font-family:"Courier New"'>ordertotal</span></span><span
+  style='font-size:13.0pt;font-family:"Courier New"'> </span><span
+  style='font-size:15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:
+  "Helvetica Neue"'>is greater than $200. The output should look like: </span><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:26'>
+  <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
+  mso-border-left-alt:solid windowtext 6.0pt;background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-family:
+  Times;mso-bidi-font-family:Times'>{&quot;<span class=GramE>x</span>&quot;:218.8195174551819,&quot;y&quot;:7419.0}
+  {&quot;<span class=GramE>x</span>&quot;:254.10237580993478,&quot;y&quot;:6945.0}
+  {&quot;<span class=GramE>x</span>&quot;:293.4231618807192,&quot;y&quot;:6338.0}
+  {&quot;<span class=GramE>x</span>&quot;:334.57302573203015,&quot;y&quot;:5635.0}
+  {&quot;<span class=GramE>x</span>&quot;:379.79714934930786,&quot;y&quot;:4841.0}
+  {&quot;<span class=GramE>x</span>&quot;:428.1165628891644,&quot;y&quot;:4015.0}
+  {&quot;<span class=GramE>x</span>&quot;:473.1484734420741,&quot;y&quot;:2391.0}
+  {&quot;<span class=GramE>x</span>&quot;:511.2576946288467,&quot;y&quot;:1657.0}
+  {&quot;<span class=GramE>x</span>&quot;:549.0106899902812,&quot;y&quot;:1029.0}
+  {&quot;<span class=GramE>x</span>&quot;:589.0761194029857,&quot;y&quot;:670.0}
+  </span></b><span style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:27'>
+  <td width=690 style='width:690.0pt;border:none;border-right:solid windowtext 6.0pt;
+  mso-border-left-alt:solid windowtext 6.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><i><span style='font-size:
+  15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Solution:
+  </span></i><span style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:28'>
+  <td width=690 style='width:690.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-left-alt:solid windowtext 6.0pt;mso-border-left-alt:solid windowtext 6.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 6.0pt;
+  background:#F0F0F0;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><span class=GramE><b><span
+  style='font-family:Times;mso-bidi-font-family:Times'>select</span></b></span><b><span
+  style='font-family:Times;mso-bidi-font-family:Times'>&#8232;explode(<span
+  class=SpellE>histogram_numeric</span>(ordertotal,10)) as x from orders&#8232;where
+  <span class=SpellE>ordertotal</span> &gt; 200; </span></b><span
+  style='font-family:Times;mso-bidi-font-family:Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:29;mso-yfti-lastrow:yes'>
+  <td width=65 style='width:65.0pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext 6.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='mso-pagination:none;mso-layout-grid-align:none;
+  text-autospace:none'><span style='font-family:Times;mso-bidi-font-family:
+  Times'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=690 style='width:690.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 6.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext 6.0pt;
+  mso-border-top-alt:.5pt;mso-border-left-alt:6.0pt;mso-border-bottom-alt:.5pt;
+  mso-border-right-alt:6.0pt;mso-border-color-alt:windowtext;mso-border-style-alt:
+  solid;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt;mso-pagination:none;
+  mso-layout-grid-align:none;text-autospace:none'><b><span style='font-size:
+  15.0pt;font-family:"Helvetica Neue";mso-bidi-font-family:"Helvetica Neue"'>Result:
+  </span></b><span style='font-size:15.0pt;font-family:"Helvetica Neue";
+  mso-bidi-font-family:"Helvetica Neue"'>You should now be comfortable running
+  Hive queries and using some of the more advanced features of Hive, like views
+  and the window functions. </span><span style='font-family:Times;mso-bidi-font-family:
+  Times'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>
