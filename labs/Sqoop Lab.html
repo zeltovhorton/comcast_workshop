@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="exporter-version" content="Evernote Mac 6.0.11 (451580)"/><meta name="author" content="azeltov@gmail.com"/><meta name="created" content="2015-06-21 14:53:41 +0000"/><meta name="source" content="desktop.mac"/><meta name="updated" content="2015-06-21 15:21:08 +0000"/><title>Sqoop Lab</title></head><body>
+<div><span style="font-size: 16.000000pt; font-family: 'Arial,Bold'; color: rgb(35.700000%, 71.000000%, 7.060000%)">Lab: Using Sqoop to Import and Export Data from MySQL RDBMS</span></div>
+<div><br/></div>
+<div><span style="font-size: 14.000000pt; font-family: 'Arial,Bold'; color: rgb(31.000000%, 50.600000%, 74.100000%)">About This Lab</span></div>
+<div><span style="font-size: 14pt;"><span style="font-family: 'Arial,Bold';"><span style="color: rgb(79, 129, 189);"><br/></span></span></span></div>
+<table style="border-collapse: collapse;width:713px;">
+<col style=""/>
+<col style=""/>
+<tr>
+<td style="border-style: solid; background-color: rgb(0.000000%, 0.000000%, 0.000000%); border-top-width: 0.600000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.486000pt; border-right-color: rgb(0.000000%, 0.000000%, 0.000000%); border-bottom-width: 0.480000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.480000pt; border-left-color: rgb(0.000000%, 0.000000%, 0.000000%);width:17.53155680224404%;">
+<div>
+<div>
+<p><span style="font-size: 10.000000pt; font-family: 'Arial,Bold'; color: rgb(100.000000%, 100.000000%, 100.000000%)">Objective:</span></p>
+</div>
+</div>
+</td>
+<td style="border-style: solid; background-color: rgb(0.000000%, 0.000000%, 0.000000%); border-top-width: 0.600000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.480040pt; border-right-color: rgb(0.000000%, 0.000000%, 0.000000%); border-bottom-width: 0.480000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.486000pt; border-left-color: rgb(0.000000%, 0.000000%, 0.000000%);width:82.46844319775596%;">
+<div>
+<div>
+<p><span style="font-size: 10.000000pt; font-family: 'Arial'; color: rgb(100.000000%, 100.000000%, 100.000000%)">Move data between HDFS and an RDBMS</span></p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="border-style: solid; border-top-width: 0.480000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.486000pt; border-right-color: rgb(0.000000%, 0.000000%, 0.000000%); border-bottom-width: 0.480000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.480000pt; border-left-color: rgb(0.000000%, 0.000000%, 0.000000%)">
+<div><br/></div>
+</td>
+<td style="border-style: solid; border-top-width: 0.480000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.480040pt; border-right-color: rgb(0.000000%, 0.000000%, 0.000000%); border-bottom-width: 0.480000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.486000pt; border-left-color: rgb(0.000000%, 0.000000%, 0.000000%)"/>
+</tr>
+<tr>
+<td style="border-style: solid; border-top-width: 0.480000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.486000pt; border-right-color: rgb(0.000000%, 0.000000%, 0.000000%); border-bottom-width: 0.480000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.480000pt; border-left-color: rgb(0.000000%, 0.000000%, 0.000000%)">
+<div>
+<div>
+<p><span style="font-size: 10.000000pt; font-family: 'Arial,Bold'">Successful outcome:</span></p>
+</div>
+</div>
+</td>
+<td style="border-style: solid; border-top-width: 0.480000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.480040pt; border-right-color: rgb(0.000000%, 0.000000%, 0.000000%); border-bottom-width: 0.480000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.486000pt; border-left-color: rgb(0.000000%, 0.000000%, 0.000000%)">
+<div>
+<div>
+<p><span style="font-size: 10.000000pt; font-family: 'Arial'">Import data from MySQL into folders in HDFS and export data from HDFS folders into a MySQL table.</span></p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="border-style: solid; border-top-width: 0.480000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.486000pt; border-right-color: rgb(0.000000%, 0.000000%, 0.000000%); border-bottom-width: 0.480000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.480000pt; border-left-color: rgb(0.000000%, 0.000000%, 0.000000%)">
+<div><br/></div>
+</td>
+<td style="border-style: solid; border-top-width: 0.480000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.480040pt; border-right-color: rgb(0.000000%, 0.000000%, 0.000000%); border-bottom-width: 0.480000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.486000pt; border-left-color: rgb(0.000000%, 0.000000%, 0.000000%)">
+<div><br/></div>
+</td>
+</tr>
+<tr>
+<td style="border-style: solid; border-top-width: 0.480000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.486000pt; border-right-color: rgb(0.000000%, 0.000000%, 0.000000%); border-bottom-width: 0.480000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.480000pt; border-left-color: rgb(0.000000%, 0.000000%, 0.000000%)"/>
+<td style="border-style: solid; border-top-width: 0.480000pt; border-top-color: rgb(0.000000%, 0.000000%, 0.000000%); border-right-width: 0.480040pt; border-right-color: rgb(0.000000%, 0.000000%, 0.000000%); border-bottom-width: 0.480000pt; border-bottom-color: rgb(0.000000%, 0.000000%, 0.000000%); border-left-width: 0.486000pt; border-left-color: rgb(0.000000%, 0.000000%, 0.000000%)"/>
+</tr>
+</table>
+<div><span style="font-size: 14.000000pt; font-family: 'Arial,Bold'; color: rgb(31.000000%, 50.600000%, 74.100000%)">Lab Steps</span></div>
+<div><br/></div>
+<div><span style="font-size: 10pt;"><span style="font-family: Arial;">Perform the following steps:</span></span></div>
+<div><span style="font-size: 10pt;"><span style="font-family: Arial;"><br/></span></span></div>
+<div><span style="font-size: 10.000000pt; font-family: 'Arial'">1 . </span></div>
+<div><span style="font-size: 10.000000pt; font-family: 'Arial'">a. </span><span style="font-size: 10pt;"><span style="font-family: Arial;">Upload the files using HUE or Ambari : /user/hue/labs</span></span></div>
+<div><span style="font-size: 10pt;"><span style="font-family: Arial;"><br/></span></span></div>
+<div><span style="font-size: 10pt;"><span style="font-family: Arial;"><br/></span></span></div>
+<div><span style="font-size: 10.000000pt; font-family: 'Arial'">As the root user, create dir labs:</span></div>
+<div><br/></div>
+<div>[root@sandbox ~]# mkdir labs</div>
+<div><span style="font-size: 10.000000pt; font-family: 'Arial'"> </span></div>
+<div><span style="font-size: 10.000000pt; font-family: 'Arial'">change directories to /root/labs:</span></div>
+<div><br/></div>
+<div><span style="font-size: 10.000000pt; font-family: 'Courier New'"># cd ~/labs</span></div>
+<div><br/></div>
+<div>[root@sandbox labs]#</div>
+<div>hadoop fs -get /user/hue/labs/salaries.txt</div>
+<div>hadoop fs -get /user/hue/labs/salaries.sql</div>
+<div><br/></div>
+<div>[root@sandbox labs]# ll</div>
+<div>total 4</div>
+<div>-rw-r--r-- 1 root root 782 2015-06-21 15:04 salaries.txt</div>
+<div><br/></div>
+<div><span style="font-size: 10.000000pt; font-family: 'Arial'">b. View the contents of salaries.txt. The comma-separated fields represent gender, age, salary, and zip code:</span></div>
+<div>
+<pre>
+<span style="font-size: 10.000000pt; font-family: 'Courier New'">   # cat salaries.txt
+</span>
+</pre></div>
+<div><br/></div>
+<div title="Page 108"><img src="Sqoop%20Lab.resources/FB14BB6E-363D-4EDA-B41D-53CF01EC2062.jpg" height="66" width="576"/> <img src="Sqoop%20Lab.resources/6644D8C0-39DD-4A7A-B5C4-077C11D37109.jpg" height="720" width="370"/></div>
+<div><br/></div>
+<div><span style="font-size: 10.000000pt; font-family: 'Arial'">c. Use the</span> <span style="font-size: 10.000000pt; font-family: 'Courier New'">ll</span> <span style="font-size: 10.000000pt; font-family: 'Arial'">command to view the contents of the /root/labs directory. Make sure you see a file named salaries.sql. This is a script that defines a new MySQL table named salaries. For the script to work, you need to copy salaries.txt into the /tmp directory:</span></div>
+<div>
+<pre>
+<span style="font-size: 10.000000pt; font-family: 'Courier New'">   # ll
+   # cp salaries.txt /tmp
+</span>
+</pre></div>
+<div><br/></div>
+<div><span style="font-size: 10.000000pt; font-family: 'Arial'">d. Run the salaries.sql script:</span></div>
+<div>
+<pre>
+<span style="font-size: 10.000000pt; font-family: 'Courier New'">   # mysql test &lt; salaries.sql
+</span>
+</pre></div>
+<div title="Page 109"><img src="Sqoop%20Lab.resources/849BFA86-FD33-4AE4-9DD3-9AA026666165.png" height="64" width="656"/> <img src="Sqoop%20Lab.resources/1336E109-B4FF-4549-B78D-537EB9B46E58.png" height="66" width="710"/></div>
+<div><br/></div>
+<div><br/></div>
+<div><span style="font-size: 10.000000pt; font-family: 'Arial'">e. To verify that the table is populated in MySQL, open the</span> <span style="font-size: 10.000000pt; font-family: 'Courier New'">mysql</span> <span style="font-size: 10.000000pt; font-family: 'Arial'">prompt:</span></div>
+<div>
+<p><span style="font-size: 10.000000pt; font-family: 'Courier New'"># mysql</span></p>
+</div>
+<div title="Page 110"><img src="Sqoop%20Lab.resources/A31C437B-ECB9-4057-92BB-7D385EDD9F43.jpg" height="267" width="756"/>
+<div>
+<div>
+<p><span style="font-size: 10.000000pt; font-family: 'Arial'">f. Switch to the test database, where the salaries table was created:</span></p>
+<pre>
+<span style="font-size: 10.000000pt; font-family: 'Courier New'">   mysql&gt; use test;
+</span>
+</pre></div>
+</div>
+<img src="Sqoop%20Lab.resources/85F8DBB7-0198-4987-B235-0AF627DD6E92.jpg" height="130" width="756"/>
+<div>
+<div>
+<p><span style="font-size: 10.000000pt; font-family: 'Arial'">g. Run the</span> <span style="font-size: 10.000000pt; font-family: 'Courier New'">show tables</span> <span style="font-size: 10.000000pt; font-family: 'Arial'">command and verify that salaries is defined:</span> <span style="font-size: 10.000000pt; font-family: 'Courier New'">mysql&gt; show tables;</span></p>
+</div>
+</div>
+<img src="Sqoop%20Lab.resources/D7DBCEE9-717B-444C-B865-03932782673B.png" height="278" width="484"/></div>
+<div><br/></div>
+<div><span style="font-size: 10.000000pt; font-family: 'Arial'">Use the</span> <span style="font-size: 10.000000pt; font-family: 'Courier New'">select</span> <span style="font-size: 10.000000pt; font-family: 'Arial'">command to select 10 items from the table and verify that it is populated:</span></div>
+<div><span style="font-family: Arial;"><span style="font-size: 10pt;"><br/></span></span>
+<pre>
+<span style="font-size: 10.000000pt; font-family: 'Courier New'">   mysql&gt; select * from salaries limit 10;
+</span>
+</pre></div>
+<ol start="8" style="list-style-type: lower-latin">
+<li style="font-size: 10.000000pt; font-family: 'Arial'">
+<p><span style="font-size: 10.000000pt; font-family: 'Arial'">Enter the following command to grant access to node2 and node3 to connect to the MySQL server running on node1:</span></p>
+<p><span style="font-size: 10.000000pt; font-family: 'Courier New'">mysql&gt; grant all privileges on *.* to 'root'@'%' with grant option;</span></p>
+</li>
+</ol>
+<div title="Page 111"><img src="Sqoop%20Lab.resources/BE811934-54A4-4DC1-B1E7-8BA00B9A0A7B.jpg" height="546" width="684"/> <img src="Sqoop%20Lab.resources/FA950786-9D4B-4C98-AC3A-233907E05982.jpg" height="89" width="756"/></div>
+<div><br/></div>
+<div><br/></div>
+<div>
+<div>
+<p><span style="font-size: 10.000000pt; font-family: 'Arial'">2 .</span></p>
+</div>
+</div>
+<div><br/></div>
+<div><span style="font-size: 10.000000pt; font-family: 'Courier New'">mysql&gt; exit</span></div>
+<div><br/></div>
+<div><img src="Sqoop%20Lab.resources/541B3C59-A6FB-444B-899F-C5D4C8723588.png" height="96" width="408"/></div>
+<div>
+<p><span style="font-size: 10.000000pt; font-family: 'Arial'">Use Sqoop to import and export</span></p>
+</div>
+<div><br/></div>
+<div><span style="font-size: 10.000000pt; font-family: 'Arial'">a. Import the test database into HDFS using the</span> <span style="font-size: 10.000000pt; font-family: 'Courier New'">sqoop import</span> <span style="font-size: 10.000000pt; font-family: 'Arial'">command (no line breaks). This will trigger a MapReduce job that may take a couple of minutes to complete:</span></div>
+<div><br/></div>
+<div>!!!Make sure all services are running in ambari with no errors!!!!</div>
+<div><span style="font-size: 10.000000pt; font-family: 'Courier New'"># sqoop import --connect jdbc:mysql://sandbox/test --table salaries --username root</span></div>
+<div><br/></div>
+<div title="Page 112"><img src="Sqoop%20Lab.resources/289598AF-0FF1-408E-9C42-2F35EAED2FF8.jpg" height="462" width="756"/></div>
+<div><br/></div>
+<div><span style="font-size: 10.000000pt; font-family: 'Arial'">Verify the import succeeded by viewing the contents of the salaries folder in HDFS:</span></div>
+<div><span style="font-family: Arial;"><span style="font-size: 10pt;"><br/></span></span>
+<pre>
+<span style="font-size: 10.000000pt; font-family: 'Courier New'">   # hdfs dfs -ls salaries
+</span>
+</pre></div>
+<ol start="2" style="list-style-type: lower-latin">
+<li style="font-size: 10.000000pt; font-family: 'Arial'">
+<p><span style="font-size: 10.000000pt; font-family: 'Arial'">MapReduce executed the command using four mappers, therefore there are four output files</span> <span style="font-size: 10.000000pt; font-family: 'Arial'">–</span> <span style="font-size: 10.000000pt; font-family: 'Arial'">one for each mapper. View the contents of the files to confirm they are the rows from the salaries table:</span></p>
+<pre>
+<span style="font-size: 10.000000pt; font-family: 'Courier New'">   # hdfs dfs -cat salaries/part-m-00000
+</span>
+</pre></li>
+</ol>
+<div title="Page 113"><img src="Sqoop%20Lab.resources/5BEA5497-993E-4142-9E8B-ABD965395199.jpg" height="154" width="756"/> <img src="Sqoop%20Lab.resources/DF90C68B-B57E-436E-90C3-D905F5F4D5B0.jpg" height="381" width="756"/></div>
+<div><br/></div>
+<div><span style="font-size: 10.000000pt; font-family: 'Arial'">Now that we have imported data from MySQL to HDFS, we will export from HDFS back to MySQL. Start by viewing the contents of the salarydata.txt file located in /root/labs/ using the</span> <span style="font-size: 10.000000pt; font-family: 'Courier New'">tail</span> <span style="font-size: 10.000000pt; font-family: 'Arial'">command. Again you will note four columns which represent gender, age, salary, and zip code:</span></div>
+<div><span style="font-family: Arial;"><span style="font-size: 10pt;"><br/></span></span>
+<pre>
+<span style="font-size: 10.000000pt; font-family: 'Courier New'">   # tail salarydata.txt
+</span>
+</pre></div>
+<ol start="4" style="list-style-type: lower-latin">
+<li style="font-size: 10.000000pt; font-family: 'Arial'">
+<p><span style="font-size: 10.000000pt; font-family: 'Arial'">Create a new HDFS directory named salarydata:</span></p>
+<pre>
+<span style="font-size: 10.000000pt; font-family: 'Courier New'">   # hdfs dfs -mkdir salarydata
+</span>
+</pre></li>
+<li style="font-size: 10.000000pt; font-family: 'Arial'">
+<p><span style="font-size: 10.000000pt; font-family: 'Arial'">Put salarydata.txt into the salarydata directory in HDFS:</span></p>
+<pre>
+<span style="font-size: 10.000000pt; font-family: 'Courier New'">   # hdfs dfs -put salarydata.txt salarydata/
+</span>
+</pre></li>
+</ol>
+<div title="Page 114"><img src="Sqoop%20Lab.resources/D6D1CB66-0E78-4456-8919-4C8E01A24528.jpg" height="364" width="630"/></div>
+<div title="Page 114"><img src="Sqoop%20Lab.resources/7519C3D7-6F16-46CB-A44F-E570386D203F.jpg" height="63" width="756"/></div>
+<div title="Page 114"><img src="Sqoop%20Lab.resources/5FF4890F-CCA5-4F2D-8DA3-0272351D0EFC.jpg" height="51" width="756"/></div>
+<div><br/></div>
+<div><span style="font-size: 10.000000pt; font-family: 'Arial'">Next we will create a table in MySQL that matches the record structure in salarydata.txt using the salaries2.sql script.</span></div>
+<div><span style="font-size: 10pt;"><span style="font-family: Arial;"><br/></span></span></div>
+<div><span style="font-size: 10pt;"><span style="font-family: Arial;">Download the </span></span><span style="font-size: 10pt;"><span style="font-family: Arial;">salaries2.sql</span></span></div>
+<div><span style="font-size: 10pt;"><span style="font-family: Arial;"><br/></span></span></div>
+<div><span style="font-size: 10pt;"><span style="font-family: Arial;">hadoop fs -get /user/hue/labs/salaries2.sql</span></span></div>
+<div><span style="font-size: 10pt;"><span style="font-family: Arial;"><br/></span></span></div>
+<div><span style="font-size: 10.000000pt; font-family: 'Arial'">Use the more command to view this script:</span></div>
+<div>
+<pre>
+<span style="font-size: 10.000000pt; font-family: 'Courier New'">   # more salaries2.sql
+</span>
+</pre></div>
+<ol start="7" style="list-style-type: lower-latin">
+<li style="font-size: 10.000000pt; font-family: 'Arial'">
+<p><span style="font-size: 10.000000pt; font-family: 'Arial'">Run the script:</span></p>
+<pre>
+<span style="font-size: 10.000000pt; font-family: 'Courier New'">   # mysql test &lt; salaries2.sql
+</span>
+</pre></li>
+</ol>
+<div title="Page 115"><img src="Sqoop%20Lab.resources/E713460D-C8B6-4F5C-B3EF-BFE801FC7D93.jpg" height="336" width="600"/></div>
+<div title="Page 115"><img src="Sqoop%20Lab.resources/49977540-BF1E-4C6E-B37B-EB7B024935E1.png" height="58" width="754"/></div>
+<div><br/></div>
+<div><span style="font-size: 10.000000pt; font-family: 'Arial'">i. Verify that the table was created successfully in MySQL:</span></div>
+<div>
+<pre>
+<span style="font-size: 10.000000pt; font-family: 'Courier New'">   # mysql
+   mysql&gt; use test;
+   mysql&gt; describe salaries2;
+</span>
+</pre></div>
+<div title="Page 116"><img src="Sqoop%20Lab.resources/8D19689E-D519-4720-B746-B69C570D1789.jpg" height="268" width="756"/></div>
+<div title="Page 116"><img src="Sqoop%20Lab.resources/82649C66-6DD1-499E-811D-CC43AFE14601.jpg" height="133" width="756"/></div>
+<div title="Page 116"><img src="Sqoop%20Lab.resources/ADFB002C-8082-42E0-A4BB-2FBB8E2E618C.jpg" height="303" width="756"/></div>
+<div><br/></div>
+<div><span style="font-size: 10.000000pt; font-family: 'Arial'">Exit the</span> <span style="font-size: 10.000000pt; font-family: 'Courier New'">mysql</span> <span style="font-size: 10.000000pt; font-family: 'Arial'">prompt:</span></div>
+<div><span style="font-family: Arial;"><span style="font-size: 10pt;"><br/></span></span>
+<p><span style="font-size: 10.000000pt; font-family: 'Courier New'">mysql&gt; exit</span></p>
+</div>
+<ol start="10" style="list-style-type: lower-latin">
+<li style="font-size: 10.000000pt; font-family: 'Arial'">
+<p><span style="font-size: 10.000000pt; font-family: 'Arial'">Use Sqoop to export the salarydata folder in HDFS into the salaries2 table in MySQL (no line breaks). At the end of the MapReduce output, you should see a log event stating that 10,000 records were exported:</span></p>
+<p><span style="font-size: 10.000000pt; font-family: 'Courier New'"># sqoop export --connect jdbc:mysql://sandbox/test --table salaries2 --export-dir salarydata --input-fields-terminated-by "," --username root</span></p>
+<p><span style="font-size: 10.000000pt; font-family: 'Arial'">...</span></p>
+</li>
+</ol>
+<div title="Page 117"><img src="Sqoop%20Lab.resources/5B2626D7-4769-4C98-B8C5-7373E56FD17E.jpg" height="41" width="756"/></div>
+<div title="Page 117"><img src="Sqoop%20Lab.resources/2F81F879-3351-4269-AF4E-53E1FC16C082.jpg" height="458" width="756"/></div>
+<div><br/></div>
+<div><br/></div>
+<div><span style="font-size: 10.000000pt; font-family: 'Arial'">l. Verify success by viewing the first 10 lines of the new rows from the salaries2 table using</span></div>
+<div>
+<p><span style="font-size: 10.000000pt; font-family: 'Arial'">the</span> <span style="font-size: 10.000000pt; font-family: 'Courier New'">mysql</span> <span style="font-size: 10.000000pt; font-family: 'Arial'">prompt:<br/></span><span style="font-size: 10.000000pt; font-family: 'Courier New'"># mysql<br/>
+mysql&gt; use test;<br/>
+mysql&gt; select * from salaries2 limit 10;</span></p>
+</div>
+<div><br/></div>
+<div><img src="Sqoop%20Lab.resources/9C262940-2B1C-4CE6-9C9E-73421D055838.jpg" height="269" width="756"/></div>
+<div><img src="Sqoop%20Lab.resources/83A7EB43-2D69-48D5-9527-F70579BE9828.jpg" height="133" width="756"/></div>
+<div><img src="Sqoop%20Lab.resources/099CEBAB-978E-4CCB-8BA2-D4C4F83BCC4C.jpg" height="540" width="716"/></div>
+<div><span style="font-size: 10pt;"><span style="font-family: Arial;"><br/></span></span></div>
+<div><span style="font-size: 10.000000pt; font-family: 'Arial'">m. Exit the mysql prompt:</span></div>
+<div>
+<p><span style="font-size: 10.000000pt; font-family: 'Courier New'">mysql&gt; exit</span></p>
+</div>
+<div><b><br/></b></div>
+<div><span style="font-size: 10.000000pt; font-family: 'Arial'"><b>RESULT: You have imported data from a MySQL table to an HDFS folder and exported the contents of an HDFS folder to a MySQL table.</b></span></div>
+</body></html>
