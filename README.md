@@ -1,1 +1,1 @@
-# comcast_workshop
+# Welcome to HDP + HIVE Comcast workshop
