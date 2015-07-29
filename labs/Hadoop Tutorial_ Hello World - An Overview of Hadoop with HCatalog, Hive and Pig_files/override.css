@@ -1,0 +1,99 @@
+
+
+
+
+
+/*
+     FILE ARCHIVED ON 2:27:12 May 22, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:37:31 Jul 29, 2015.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/* Use this file to place temporary CSS overrides. These are included in the footer and hence should be used sparingly, and as an interim solution until proper integration */
+
+/* == SYNTAX HIGHLIGHTER OVERRIDES == */
+.syntaxhighlighter                  { font-size: .9em !important; }
+.syntaxhighlighter .code            { line-height:1.4em !important; }
+
+/* == FANCYBOX OVERRIDES == */
+/* .fancybox-skin                      { background-color:#69be28; } Needs to be placed in override.css */
+/* .fancybox-inner                     { background-color:#f6f6f6; } */
+
+/* == GRAVITY FORMS OVERRIDES */
+.gform_wrapper .top_label .gfield_label             { font-weight:normal; margin:0 0 2px 0; font-size:90%; color:#666; }
+.gform_wrapper .top_label .gfield_label:after       { content:' :';}
+.gform_wrapper select                               { font-size:90%; }
+.gform_wrapper input[type=text],
+.gform_wrapper input[type=url],
+.gform_wrapper input[type=email],
+.gform_wrapper input[type=tel],
+.gform_wrapper input[type=number],
+.gform_wrapper input[type=password]                 { padding:5px; font-size:90%; }
+
+.gform_wrapper textarea                             { padding:5px; font-size:90%; }
+
+.gform_wrapper .gform_footer                        { margin:0px; padding:0px; }
+.gform_wrapper .gform_footer input.button,
+.gform_wrapper .gform_footer input[type=submit]     { float:right;}
+
+.gform_wrapper .description,
+.gform_wrapper .gfield_description,
+.gform_wrapper .gsection_description,
+.gform_wrapper .instruction                         { color:#999; font-size:80%;  }
+
+.gform_wrapper .gfield_description                  { padding-top:0px; margin-top:-10px; } /* removed margin needed in the modals/more-examples */
+
+.gform_wrapper .gform_page_footer                   { text-align:right; border-top:0px; padding-top:0px;}
+.gform_wrapper .gfield_required                     { color:#f00; }
+
+/* Popup Gravity form */
+#gf-popup{
+	font-family: "Cabin","Helvetica Neue",Arial,Helvetica,"Lucida Grande",sans-serif;
+}
+#gf-popup  .gform_heading h3{
+	color :#69BE28;
+}
+#gf-popup  .gfield_label{
+	font-weight:700;
+}
+#gf-popup input[type="submit"] {
+	background: none repeat scroll 0 0 #FF6B01;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 22px;
+	text-align: center;
+	color: #fff;
+	width: 155px;
+	border:none;
+}
+#gf-popup input[type="submit"]:hover {
+	box-shadow: 0 0 0 26px rgba(0,0,0,0.1) inset;
+}
+
+
+#gf-popup input[type="button"] {
+	background: none repeat scroll 0 0 #C3C3C3;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 22px;
+	text-align: center;
+	color: #fff;
+	width: 155px;
+	border:none;
+	margin-left:45%;
+	float:left;
+}
+#gf-popup input[type="button"]:hover {
+	box-shadow: 0 0 0 26px rgba(0,0,0,0.1) inset;
+}
+
+/* Customization for the How will you use HDP Form */
+#input_9_7                  { height:60px; }
+#gf-popup input#skipThis    { margin-right:20px; float:right; margin-left:0px;}
+#gform_9 .gform_body        { margin-bottom:10px; }
+
+
+/* Forums override... I'm sure there's a better place to do this, but in a hurry */
+.div.bbp-breadcrumb { float:none; }
